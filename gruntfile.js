@@ -32,10 +32,10 @@ module.exports = function(grunt){
             dev: {
                 options: {
                     patterns: [
-                           {
+                        {
                             match: 'ENDERECO_DO_CSS',
                             replace: './style/main.scc'
-                           }
+                        }
                     ]
                 },
                 files: [
@@ -50,10 +50,10 @@ module.exports = function(grunt){
             dist: {
                 options: {
                     patterns: [
-                           {
+                        {
                             match: 'ENDERECO_DO_CSS',
                             replace: './styles/main.min.css'
-                           }
+                        }
                     ]
                 },
                 files: [
@@ -67,19 +67,19 @@ module.exports = function(grunt){
             }
         },
         htmlmin: {
-            dist: 
-                {
-                    options: {
-                        removeComments: true,
-                        collapseWhitespace: true
-                    },
-                    files: {
-                        'prebuild/index.html':'src/index.html'
-                    }
+            dist: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {
+                    'prebuild/index.html':'src/index.html'
                 }
-            
+            }
         },
+        
         clean: ['prebuild']
+
         
     })
 
@@ -89,8 +89,9 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-replace');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     
 
     grunt.registerTask('default',['watch']);
-    grunt.registerTask('build',['less:production', 'htmlmin:dist','replace:dist', ]);
+    grunt.registerTask('build',['less:production', 'htmlmin:dist','replace:dist', 'clean']);
 }
