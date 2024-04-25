@@ -31,6 +31,17 @@ input {
   border: none;
   background-color: transparent;
   text-align: center;
-  color: #fff;
+  color: #050404;
   border-bottom: 6px auto 0;
+}
+.resultado {
+  padding: 20px;
+  margin-top: 140px;
+  border: 8px solid #fff;
+  display: none;
+}
+.resultado span {
+  font-weight: bold;
+  font-size: 3em;
+  display: block;
 }

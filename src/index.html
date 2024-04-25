@@ -9,17 +9,22 @@
 <body>
     <main>
         <h1>Sorteador</h1>
-        <form>
+        <form id="form-sort">
             <div>
                 <div>
                     <label for="numero-maximo">Numero Maximo</label>
-                    <input type="number" id="numero-maximo">
+                    <input type="number" id="numero-maximo" required min="2" value="2" step="1">
                 </div>
                 <div>
                     <button type="submit">Sortear</button>
                 </div>
             </div>
         </form>
+        <div class="resultado">
+        O Numero Sorteado Foi:    <span id="resultado-valor"></span>
+        </div>
     </main>
+    
+    <script src="@@ENDERECO_DO_JS"></script>
 </body>
 </html>
